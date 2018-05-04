@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>35.祝愿墙</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: url("image/bg.gif");
+            font-size: 12px;
+        }
+        .blank{
+            background:  url("image/content_bg.jpg") no-repeat;
+            width: 960px;
+            height: 627px;
+            margin: 0 auto;
+            position: relative;
+
+        }
+        .paper{
+            position: absolute;
+            width: 227px;
+            left: 60px;
+            top: 60px;
+        }
+        .paperTop{
+            width: 227px;
+            height: 23px;
+            background:  url("image/tip1_h.gif") 0 0 no-repeat;
+            padding-top: 45px;
+        }
+        .paperMid{
+            width: 200px;
+
+            background:  url("image/tip1_c.gif") repeat-y;
+            overflow: hidden;
+            padding-left: 15px;
+            padding-right: 20px;
+
+
+
+        }
+
+
+
+
+        .paperBottom{
+            width: 227px;
+            height: 73px;
+            background:  url("image/tip1_f.gif") no-repeat;
+        }
+        .date{
+            padding-left: 1em;
+            float: left;
+        }
+        .close{
+            float: right;
+            padding-right: 10px;
+            cursor: pointer;
+        }
+        .clr{
+            clear: both;
+        }
+        .smallImg{
+            float: left;
+            width: 35px;
+            padding-left: 15px;
+            height: 35px;
+            text-align: center;
+
+
+        }
+        p{
+            float: right;
+            padding-right: 15px;
+            text-align: right;
+            font-size: 14px;
+            line-height: 35px;
+            color: #C0F;
+
+        }
+
+    </style>
+</head>
+<body>
+<div class="blank" id="con">
+    <div class="paper" id="pap">
+        <div class="paperTop">
+            <div class="date">第N条 *年*月*日</div>
+            <div class="close">×</div>
+            <div class="clr"></div>
+        </div>
+        <div class="paperMid">you can be the greatest,you can be the best,you can be the King Kong banging on your chest</div>
+        <div class="paperBottom">
+            <div class="smallImg">
+                <img src="image/bpic_1.gif" alt="">
+
+            </div>
+            <p>-------mystery</p>
+        </div>
+    </div>
+</div>
+<script>
+    //首先创建多张纸条
+    var paper = document.getElementById("pap");
+    var con = document.getElementById("con");
+    for(var  i = 0; i < 10; i++){
+
+        var newPaper = paper.cloneNode(true);
+        var topValue = Math.random()*400;
+        var leftValue = Math.random()*700;
+        newPaper.style.top = topValue+"px";
+        newPaper.style.left = leftValue+"px";
+        con.appendChild(newPaper);
+        newPaper.onclick = fn;
+    }
+
+    //点击 显示在最上面
+   var index = 1;
+    function fn(a){
+        this.style.zIndex = index;
+        index++;
+    }
+
+
+
+</script>
+</body>
+</html>

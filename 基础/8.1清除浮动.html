@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8.1清除浮动</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /*div{
+            background-color: red;
+
+        }
+        p{
+            width: 100px;
+            background-color: blue;
+            float: left;
+        }*/
+
+        .box1{
+            background-color: green;
+            /*添加高度*/
+            height: 100px;
+        }
+        .box2{
+            background-color: yellow;
+        }
+        li{
+            float: left;
+            width: 100px;
+            list-style: none;
+        }
+        .ul1 li{
+            background-color: red;
+        }
+        .ul2 li{
+            background-color: orangered;
+        }
+    </style>
+</head>
+<body>
+<!--<div>
+<p>我是文字</p>
+</div>-->
+<!--方法一 给前面的父盒子添加高度-->
+<div class="box1">
+    <ul class="ul1">
+        <li>one</li>
+        <li>one</li>
+        <li>one</li>
+    </ul>
+</div>
+<div class="box2">
+    <ul class="ul2">
+        <li>fir</li>
+        <li>fir</li>
+        <li>fir</li>
+    </ul>
+</div>
+</body>
+</html>

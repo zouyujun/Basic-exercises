@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>42.jd 广告栏关闭</title>
+    <style>
+        .yellow{
+            background-color: yellow;
+            width: 100%;
+            height: 80px;
+        }
+        .pink{
+            background-color: pink;
+            width: 800px;
+            height: 80px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .red{
+            background-color: red;
+            width: 800px;
+            height: 80px;
+            margin: 0 auto;
+        }
+        a{
+            text-decoration: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="yellow" style = "opacity: 1" >
+    <div class="pink">
+        <a href="#">×</a>
+    </div>
+</div>
+<div class="red">
+
+</div>
+<script>
+    var a = document.getElementsByTagName("a")[0];
+    var div1 = document.getElementsByTagName("div")[0];
+
+    a.onclick = function () {
+      var timer =  setInterval(function () {
+            div1.style.opacity -= 0.1;
+            if(div1.style.opacity < 0){
+                div1.style.display = "none";
+                clearInterval(timer)
+            }
+        },50)
+
+    }
+
+</script>
+</body>
+</html>

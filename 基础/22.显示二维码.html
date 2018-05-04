@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>22.显示二维码</title>
+    <style>
+        div{
+            width: 48px;
+            height: 52px;
+            position: absolute;
+            right: 5px;
+            bottom: 200px;
+            background: url("image/bgs.png") -161px -49px;
+        }
+        img{
+            display: none;
+            position: absolute;
+            right: 50px;
+            bottom: 200px;
+        }
+        .show{
+            display: block;
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+<img src="image/456.png" alt="">
+<script>
+    var div0 = document.getElementsByTagName("div")[0];
+    var img = document.getElementsByTagName("img")[0];
+    div0.onmouseover = function () {
+        img.className = "show";
+    };
+    div0.onmouseout = function () {
+        img.className = "hide";
+    }
+</script>
+</body>
+</html>

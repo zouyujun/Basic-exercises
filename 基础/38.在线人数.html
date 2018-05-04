@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>38.在线用户</title>
+    <style>
+        .nav{
+            width: 700px;
+            line-height: 30px;
+            background-color: red;
+            margin: 0 auto;
+            color: white;
+            font-size: 16px;
+            padding-left: 10px;
+        }
+        .content{
+            width: 700px;
+            margin: 0 auto;
+        }
+        li{
+            list-style: none;
+            float: left;
+            padding-left: 10px;
+        }
+        p{
+            font-size: 12px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+ <div class="nav">当前在线用户</div>
+<div class="content" id="users">
+    <ul id="ul">
+        <!--<li>-->
+            <!--<a href="#"><img src="image/noavatar_small.gif" alt=""></a>-->
+            <!--<p>tdxy01</p>-->
+        <!--</li> -->
+
+
+    </ul>
+
+</div>
+ <script>
+     var users = [
+         {"name": "tdxy01","icon":"image/noavatar_small.gif"},
+         {"name": "沉眠楚人","icon":"image/noavatar_small.gif"},
+         {"name": "爱上karina","icon":"image/75_avatar_small.jpg"},
+         {"name": "tdxy01","icon":"image/89_avatar_small.jpg"},
+         {"name": "today","icon":"image/noavatar_small.gif"},
+         {"name": "hlg","icon":"image/noavatar_small.gif"},
+         {"name": "itcast","icon":"image/noavatar_small.gif"},
+         {"name": "heima","icon":"image/noavatar_small.gif"},
+         {"name": "nima","icon":"image/noavatar_small.gif"},
+         {"name": "gege","icon":"image/noavatar_small.gif"},
+         {"name": "nimei","icon":"image/noavatar_small.gif"},
+         {"name": "goodman","icon":"image/noavatar_small.gif"},
+         {"name": "haoren","icon":"image/noavatar_small.gif"},
+         {"name": "yuanxiaojie","icon":"image/noavatar_small.gif"},
+         {"name": "zhengyue","icon":"image/noavatar_small.gif"},
+         {"name": "qishi","icon":"image/noavatar_small.gif"},
+         {"name": "qqtang","icon":"image/noavatar_small.gif"},
+         {"name": "wawawa","icon":"image/noavatar_small.gif"},
+         {"name": "haha","icon":"image/noavatar_small.gif"},
+         {"name": "robot","icon":"image/noavatar_small.gif"},
+         {"name": "XFlute","icon":"image/noavatar_small.gif"},
+         {"name": "lovmilan","icon":"image/noavatar_small.gif"},
+         {"name": "johnny670","icon":"image/noavatar_small.gif"},
+         {"name": "xiaobinbin02","icon":"image/noavatar_small.gif"},
+         {"name": "axxxxx","icon":"image/noavatar_small.gif"}
+     ];
+
+     var div = document.getElementById("users");
+     var ul = div.firstElementChild || div.firstChild;
+     for(var i = 0; i<users.length;i++){
+         ul.innerHTML += '<li>'+
+                 '<a href="#"><img src="'+users[i].icon+'" alt=""></a>'+
+                 '<p><a href="#">'+users[i].name+'</a></p>'+
+                '</li>'
+     }
+
+ </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>41.几秒后关闭广告</title>
+    <style>
+        img{
+            position: fixed;
+            top: 50%;
+            left: 0;
+            width: 120px;
+            margin-top: -60px;
+
+
+        }
+    </style>
+</head>
+<body>
+<img src="image/chen.PNG" alt="">
+<script>
+    var img = document.getElementsByTagName("img")[0];
+    setTimeout(function () {
+        img.style.display = "none"
+    },5000)
+</script>
+</body>
+</html>

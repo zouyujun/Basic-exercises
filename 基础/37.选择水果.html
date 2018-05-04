@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>37.选择水果 </title>
+    <style>
+        select{
+            width: 150px;
+            height: 200px;
+            background-color: #a4ff43;
+        }
+    </style>
+</head>
+<body>
+<select id="se1" size="6" multiple>
+    <option value="">香蕉</option>
+    <option value="">苹果</option>
+    <option value="">菠萝</option>
+    <option value="">芒果</option>
+
+</select>
+<input type="button" value=">>>">
+<input type="button" value="<<<">
+<input type="button" value=">">
+<input type="button" value="<">
+<select id="se2" size="6" multiple>
+
+</select>
+<script>
+    var se1 = document.getElementById("se1");
+    var se2 = document.getElementById("se2");
+    var inpArr = document.getElementsByTagName("input");
+    var arr = se1.children;
+    var arr1 = se2.children;
+
+    //前两个按钮的转换
+    inpArr[0].onclick = function () {
+      for(var i = arr.length-1; i >= 0; i--){
+          se2.appendChild(arr[0])
+      }
+    };
+    inpArr[1].onclick = function () {
+        for(var i = arr1.length-1; i >= 0; i--){
+            se1.appendChild(arr1[0])
+        }
+    };
+    inpArr[2].onclick = function () {
+        for(var i = arr.length-1; i >= 0; i--){
+            if(arr[i].selected){
+                se2.appendChild(arr[i])
+            }
+        }
+    };
+    inpArr[3].onclick = function () {
+        for(var i = arr1.length-1; i >= 0; i--){
+            if(arr1[i].selected){
+                se1.appendChild(arr1[i])
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

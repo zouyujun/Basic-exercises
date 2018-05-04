@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>28.tab切换</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 600px;
+            height: 400px;
+            background-color: red;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        ul{
+            width: 600px;
+            height: 50px;
+            background-color: pink;
+        }
+        li{
+            float: left;
+            list-style: none;
+            width: 120px;
+            line-height: 50px;
+            text-align: center;
+        }
+        span{
+            width: 600px;
+            line-height: 350px;
+            display: none;
+            text-align: center;
+            font-size: 60px;
+            background-color: yellow;
+
+        }
+        .current{
+            background-color: yellow;
+        }
+        .show{
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+<div>
+    <ul>
+        <li class="current">鞋子</li>
+        <li>袜子</li>
+        <li>帽子</li>
+        <li>裤子</li>
+        <li>裙子</li>
+
+    </ul>
+    <span class="show">鞋子</span>
+    <span>袜子</span>
+    <span>帽子</span>
+    <span>裤子</span>
+    <span>裙子</span>
+
+</div>
+<script>
+    var liArr = document.getElementsByTagName("li");
+    var spanArr = document.getElementsByTagName("span");
+    for(var i =0; i<liArr.length;i++){
+        liArr[i].index = i;
+        liArr[i].onmouseover = function () {
+            for(var j = 0; j < liArr.length;j++){
+                liArr[j].className = "";
+                spanArr[j].className = "";
+            }
+            this.className = "current";
+            spanArr[this.index].className = "show"
+        }
+    }
+</script>
+</body>
+</html>

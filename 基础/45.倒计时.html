@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>45.倒计时</title>
+</head>
+<body>
+<p></p>
+<script>
+    var nowTime = new Date();
+    var goalTime = new Date("2018/12/31/23:59");
+    var charge = goalTime - nowTime;
+    var p = document.getElementsByTagName("p")[0];
+    var day =parseInt( charge/1000/60/60/24);
+    var hour = parseInt(charge/1000/60/60%24);
+    var minute = parseInt(charge/1000/60%60);
+    var second = parseInt(charge/1000%60);
+    var milliseconds = parseInt(charge%1000);
+    p.innerText = "距离还有"+day+"天"+hour+"时"+minute+"分"+second+"秒"+milliseconds+"毫秒"
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8.3清除浮动</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box1{
+            background-color: green;
+
+        }
+        .box2{
+            background-color: yellow;
+
+        }
+        li{
+            float: left;
+            width: 100px;
+            list-style: none;
+        }
+        .ul1 li{
+            background-color: red;
+        }
+        .ul2 li{
+            background-color: orangered;
+        }
+        .wall{
+            clear: both;
+        }
+        /*为了实现margin效果*/
+        .h20{
+            height: 20px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+<div class="box1">
+    <ul class="ul1">
+        <li>one</li>
+        <li>one</li>
+        <li>one</li>
+    </ul>
+</div>
+<!--两个盒子之间添加一个块级元素-->
+<div class="wall h20"> </div>
+<div class="box2">
+    <ul class="ul2">
+        <li>fir</li>
+        <li>fir</li>
+        <li>fir</li>
+    </ul>
+</div>
+</body>
+</html>

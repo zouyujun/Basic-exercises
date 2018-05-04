@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8.2清除浮动</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box1{
+            background-color: green;
+
+        }
+        .box2{
+            background-color: yellow;
+            /*使用clear:both 但margin会失效*/
+            clear: both;
+            margin-top: 20px;
+        }
+        li{
+            float: left;
+            width: 100px;
+            list-style: none;
+        }
+        .ul1 li{
+            background-color: red;
+        }
+        .ul2 li{
+            background-color: orangered;
+        }
+    </style>
+</head>
+<body>
+<div class="box1">
+    <ul class="ul1">
+        <li>one</li>
+        <li>one</li>
+        <li>one</li>
+    </ul>
+</div>
+<div class="box2">
+    <ul class="ul2">
+        <li>fir</li>
+        <li>fir</li>
+        <li>fir</li>
+    </ul>
+</div>
+</body>
+</html>

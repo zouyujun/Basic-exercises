@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8.6清除浮动</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box1{
+            background-color: green;
+
+        }
+        .box2{
+            background-color: yellow;
+
+        }
+        li{
+            float: left;
+            width: 100px;
+            list-style: none;
+        }
+        .ul1 li{
+            background-color: red;
+        }
+        .ul2 li{
+            background-color: orangered;
+        }
+        /*给前面盒子添加伪元素*/
+        .box1:after{
+            /*生成内容*/
+            content: "";
+            /*以块级元素显示*/
+            display: block;
+            /*避免破坏原有布局*/
+            height: 0;
+            /*生成内容不可见*/
+            visibility: hidden;
+            clear: both;
+        }
+        .box1{
+            /*兼容IE*/
+            *zoom: 1;
+        }
+    </style>
+</head>
+<body>
+<div class="box1">
+    <ul class="ul1">
+        <li>one</li>
+        <li>one</li>
+        <li>one</li>
+    </ul>
+</div>
+<div class="box2">
+    <ul class="ul2">
+        <li>fir</li>
+        <li>fir</li>
+        <li>fir</li>
+    </ul>
+</div>
+</body>
+</html>

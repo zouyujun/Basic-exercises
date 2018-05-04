@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="http://localhost:63342/html/%E5%9F%BA%E7%A1%80/3.table%E6%A0%87%E7%AD%BE.html">
+<!--单选  相同name-->
+<input type="radio" name="num">1
+<input type="radio" name="num">2
+<input type="radio" name="num" checked="checked">3
+<br>
+<!--多选-->
+<input type="checkbox" checked> 网球
+<input type="checkbox"> 足球
+<input type="checkbox"> 篮球
+<!--label-->
+<br>
+<label for="acc">account:</label>
+<input type="text" id="acc">
+密码:<input type="password">
+
+<br>
+<input type="image" src="../images/nini.png" width="50px">
+    <select name="" id="">
+        <option value="">1</option>
+        <option value="">2</option>
+        <option value="" selected>3</option>
+        <option value="">4</option>
+    </select>
+<input type="submit">
+
+</form>
+<!--只有firefox和opera 支持 datalist-->
+请选择一项运动:<input list="balls">
+<datalist id="balls">
+    <option value="">足球</option>
+    <option value="">羽毛球</option>
+    <option value="">网球</option>
+    <option value="">乒乓球</option>
+</datalist>
+<br>
+
+<select>
+    <optgroup label="北京">
+        <option value="">长城</option>
+        <option value="" selected>故宫</option>
+        <option value="">天坛</option>
+    </optgroup>
+    <optgroup label="上海">
+        <option value="">东方明珠</option>
+        <option value="">外滩</option>
+    </optgroup>
+</select>
+
+</body>
+
+</html>

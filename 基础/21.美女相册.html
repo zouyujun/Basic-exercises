@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>21.美女相册</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+       body{
+           margin:  1em 10%;
+       }
+
+
+        li{
+            list-style: none;
+            float: left;
+            margin: 20px 20px 0 0;
+        }
+        ul{
+            overflow: hidden;
+        }
+        img{
+            margin-top: 30px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <h3>美女相册</h3>
+    <ul>
+        <li><a href="image/1.jpg"><img src="image/1.jpg" alt="" width="100px"></a></li>
+        <li><a href="image/2.jpg"><img src="image/2.jpg" alt="" width="100px"></a></li>
+        <li><a href="image/3.jpg"><img src="image/3.jpg" alt="" width="100px"></a></li>
+        <li><a href="image/4.jpg"><img src="image/4.jpg" alt="" width="100px"></a></li>
+
+ </ul>
+
+    <img src="image/placeholder.png" alt="" id="placeholder" width="400px">
+    <script>
+       var aArr = document.getElementsByTagName("a");
+       var img = document.getElementById("placeholder");
+        for(var i = 0; i<aArr.length; i++){
+            aArr[i].onclick = function () {
+                img.src = this.href;
+                return false;
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>27.全选反选 </title>
+</head>
+<body>
+<table>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>菜名</td>
+        <td>饭店</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>豌豆饭</td>
+        <td>老娘舅</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>辣子鸡</td>
+        <td>老娘舅</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>红烧鱼</td>
+        <td>老娘舅</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>藤椒鱼</td>
+        <td>老娘舅</td>
+    </tr>
+</table>
+<script>
+    //点第一个 其余四个全选 ，
+    //当后4个 全点 第一个选
+    var inpArr = document.getElementsByTagName("input");
+    inpArr[0].onclick = function () {
+        for(var i =1; i<inpArr.length; i++){
+            if(this.checked === true){
+                inpArr[i].checked = true
+            }
+            else {
+                inpArr[i].checked = false
+            }
+
+        }
+
+    };
+    for(var i = 1; i<inpArr.length;i++){
+inpArr[i].onclick = function () {
+    var bool = true;
+    for(var j = 1; j<inpArr.length;j++){
+        if(inpArr[j].checked == false){
+            bool = false
+        }
+    }
+    inpArr[0].checked = bool;
+
+}
+    }
+</script>
+</body>
+</html>

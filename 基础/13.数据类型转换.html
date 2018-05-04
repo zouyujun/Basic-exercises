@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>13.数据类型转换</title>
+</head>
+<body>
+<script>
+    //转换成string first
+    var num = 18;
+    console.log(typeof num);
+    var str1 = num +"";
+    console.log(typeof str1);
+    // second
+    var str2 = String(num);
+    console.log(typeof str2);
+
+    //third
+    var str3 = num.toString();
+    console.log(typeof str3);
+
+    // null , undefined no toString
+
+    //转换成Number
+    var num1 = "11" - 0;
+    var num2 = "11" * 1;
+    var num3 = "11" / 1;
+    console.log(typeof num1);
+    console.log(typeof num2);
+    console.log(typeof num3);
+// Number()
+    var num4 = Number("18");
+    var num5 = Number("18.11");
+    console.log(num4);
+    console.log(typeof num4);
+    console.log(num5);
+    //parseInt()  parseFloat()
+    console.log(parseInt("123.123aaa"));//123
+    console.log(parseInt("bbb123.123aaa"));//NaN
+    console.log(parseFloat("123.123aaa"));//123.123
+    console.log(parseFloat("bbb123.123aaa"));//NaN
+</script>
+</body>
+</html>

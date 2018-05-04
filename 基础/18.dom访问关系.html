@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>18.dom访问关系</title>
+    <style>
+        .box1{
+            background-color: red;
+            width: 100px;
+            height: 100px;
+        }
+        .box2{
+            background-color: green;
+            width: 50px;
+            height: 50px;
+
+        }
+        .box3{
+            background-color: pink;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+<div class="box1">
+    <div class="box2"></div>
+    <div class="box3"></div>
+</div>
+
+<script>
+    //父节点 parentNode
+    var box1 = document.getElementsByClassName("box1")[0];
+    var box2 = document.getElementsByClassName("box2")[0];
+    box2.parentNode.style.backgroundColor = "yellow";
+
+    //子节点  firstElementChild  firstChild    lastElementChild lastChild
+    var c = box1.firstElementChild || box1.firstChild;
+    c.style.backgroundColor = "black";
+
+    //所有子节点 childNodes  children
+    console.log(box1.childNodes);
+    console.log(box1.childNodes);
+    console.log(box1.children);
+
+    //获取所有的兄弟节点
+    function getBroEle(ele){
+        var a = [];
+        var b = ele.parentNode.children;
+                for(var i = 0;i< b.length;i++){
+                    if(b[i]!==ele)
+                        a.push(b[i])
+                }
+        return a;
+    }
+
+    //创建节点
+    var ul1 = document.createElement("ul");
+    var vvv = document.createElement("ashfsgvish");
+    console.log(ul1);
+    console.log(vvv);
+    //添加节点
+    var ccc = document.createElement("li");
+    ul1.appendChild(ccc);
+    ul1.insertBefore(vvv,ccc);
+    //删除节点
+    ul1.removeChild(vvv);
+    //ccc.parentNode.removeChild(ccc);
+    //复制节点
+    var copy1 = ul1.cloneNode();
+    console.log(copy1);
+    var copy2 = ul1.cloneNode(true);
+    var copy3 = ul1.cloneNode(false);
+    console.log(copy2);
+    console.log(copy3);
+
+
+</script>
+</body>
+</html>

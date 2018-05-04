@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>15.Array内置方法</title>
+</head>
+<body>
+<button>点击测试every</button>
+<button>点击测试filter</button>
+<button>点击测试forEach</button>
+<button>点击测试map</button>
+<button>点击测试some</button>
+
+<script>
+    //push 在数组最后插入
+    var arr1 =[1,2,3];
+    arr1.push(4);
+    console.log(arr1);
+    //pop 取出最后一项
+    arr1.pop();
+    console.log(arr1);
+    //unshift 在数组最前插入
+    arr1.unshift(0);
+    console.log(arr1);
+    //shift 取出最前的元素
+    arr1.shift();
+    console.log(arr1);
+    //sort() 排序
+    var arr2 = [1,3,2,4,0];
+    arr2.sort(function (a,b) {
+        return b - a ;
+    });
+    console.log(arr2);
+    //concat 拼接数组
+    var arr3 = [1,3,5];
+    var arr4 = [2,4,6];
+    console.log(arr3.concat(arr4));
+    //slice 从索引值1 截取到 索引值6之前的数
+    var arr5 = [1,2,3,4,5,96,7,8];
+    console.log(arr5.slice(1, 6));
+    //splice  包括索引值为6的数
+    console.log(arr5.splice(1, 6));
+    //every(),filter(),forEach(),map(),some()
+    //every() 检测所有元素是否符合条件
+    var arr = [18,22,26,9];
+    function checkAge(a){
+        return a >= 18
+    }
+    document.getElementsByTagName("button")[0].onclick = function () {
+        console.log(arr.every(checkAge));
+    };
+    //filter  呈现出符合条件的元素
+    document.getElementsByTagName("button")[1].onclick = function () {
+        console.log(arr.filter(checkAge));
+    };
+    //forEach 调用数组的每个元素，并将元素传递
+    var numbers = [1,2,3,4,5,6];
+    var sum = 0;
+    function addNum (item){
+        sum+=item;
+
+    }
+    document.getElementsByTagName("button")[2].onclick = function () {
+
+        numbers.forEach(addNum);
+        console.log(sum);
+
+    };
+
+    //map() 返回一个新数组 具体元素看调用函数决定
+
+    var arrA =[1,2,3,4,5,6];
+    function my_function(num){
+        return num*10;
+    }
+
+    document.getElementsByTagName("button")[3].onclick = function () {
+        console.log(arrA.map(my_function));
+
+    };
+    //some() 检测数组中的元素是否满足指定条件 如果有返回true 剩余的停止检测 ，没有返回false
+
+    var arrB = [1,0,2,3];
+    function myFunction(num){
+        return num>6;
+    }
+    document.getElementsByTagName("button")[4].onclick = function () {
+        console.log(arrB.some(myFunction));
+
+    };
+    //清空数组
+    var arrC = [1,2,3];
+    //arrC.splice(0,arrC.length);
+    //arrC = [];
+    //arrC.length = 0;
+    console.log(arrC);
+
+</script>
+</body>
+</html>

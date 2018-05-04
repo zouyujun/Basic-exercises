@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>25.文本框高亮显示</title>
+</head>
+<style>
+    .right{
+        border: 1px solid forestgreen;
+    }
+    .wrong{
+        border: 1px solid red;
+    }
+</style>
+<body>
+<input type="text" onblur="toShow(this)">
+<input type="password" onblur="toShow(this)">
+<script>
+    function toShow(aa){
+        if(aa.value.length<6 || aa.value.length>12){
+            aa.className += "wrong"
+        }else{
+            aa.className += "right"
+        }
+    }
+</script>
+</body>
+</html>

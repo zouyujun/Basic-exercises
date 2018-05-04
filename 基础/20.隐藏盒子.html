@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>20.隐藏盒子</title>
+    <style>
+        div{
+            background-color: pink;
+            width: 200px;
+            height: 200px;
+        }
+        .show{
+            display: block;
+        }
+        .hide{
+            display: none;
+        }
+        
+    </style>
+</head>
+<body>
+<button>隐藏</button>
+<div>you could be the greatest, you can be the best ,you can be the King Kong banging on your chest</div>
+<script>
+    var butt = document.getElementsByTagName("button")[0];
+    var div1 = document.getElementsByTagName("div")[0];
+    butt.onclick = function () {
+        if(this.innerHTML == "隐藏"){
+            div1.className = "hide";
+            this.innerHTML = "显示";
+        }
+
+        else{
+            div1.className = "show";
+            this.innerHTML = "隐藏";
+        }
+
+    };
+
+</script>
+</body>
+</html>

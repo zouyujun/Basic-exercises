@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>48.判断字符串的占位长度</title>
+</head>
+<body>
+<script>
+    // 英文占1位 非英文占2位
+    //英文的unicode 为 0-127
+    var str = "you are beautiful you are beautiful it is true 我可以";
+    function getStrLength (ele){
+        var count = 0;
+        for(var i = 0; i<ele.length;i++){
+            if(ele.charCodeAt(i)>=0 && ele.charCodeAt(i) <= 127){
+                count++;
+            } else{
+                count+=2;
+            }
+        }
+        return count;
+
+    }
+    console.log(getStrLength(str))
+    console.log(str.length);
+</script>
+</body>
+</html>

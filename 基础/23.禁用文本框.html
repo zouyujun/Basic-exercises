@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>23.禁用文本框</title>
+</head>
+<body>
+<input type="text">
+<button>禁用</button>
+<button>解除</button>
+<br>
+<input type="password">
+
+<script>
+    var inp = document.getElementsByTagName("input")[0];
+    var butt1 = document.getElementsByTagName("button")[0];
+    var butt2 = document.getElementsByTagName("button")[1];
+    butt1.onclick = function () {
+        inp.disabled = true;
+    };
+    butt2.onclick = function () {
+      inp.disabled = false;
+    }
+</script>
+</body>
+</html>

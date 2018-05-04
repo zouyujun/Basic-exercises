@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>34.dom元素的创建</title>
+</head>
+<body>
+<ul>
+    111111
+</ul>
+<script>
+    //第一种创建方式
+    document.write("<li>document.write创建的li</li>");
+    //第二种
+    var ul = document.getElementsByTagName("ul")[0];
+    ul.innerHTML += "<li> innerHTML 创建</li>";
+    //第三种
+    var newLi = document.createElement("li");
+    newLi.innerHTML = "<li>createElement创建的";
+    ul.appendChild(newLi);
+
+
+
+</script>
+
+</body>
+</html>

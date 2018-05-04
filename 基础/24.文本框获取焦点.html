@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>24.文本框获取焦点</title>
+    <style>
+        input{
+            color: #999;
+        }
+        label{
+            position: absolute;
+            top: 59px;
+            left: 59px;
+            font-size: 12px;
+            color: #cccccc;
+        }
+        .show{
+            display: block;
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+placeholder:<input type="text" placeholder="我是placeholder"><br>
+京东：<input type="text" value="我是京东"><br>
+<label for="tb">我是淘宝</label>淘宝：<input type="text" id="tb">
+<script>
+    //京东文本框
+    var inp1 = document.getElementsByTagName("input")[1];
+    inp1.onfocus = function () {
+        if(this.value == "我是京东"){
+            inp1.value = "";
+            inp1.style.color = "#000";
+        }
+
+
+    };
+    inp1.onblur = function () {
+        if(this.value == ""){
+            inp1.value = "我是京东";
+            inp1.style.color = "#ccc"
+        }
+
+    };
+    //淘宝文本框
+    var inp2 = document.getElementsByTagName("input")[2];
+    var lab = document.getElementsByTagName("label")[0];
+    inp2.oninput = function () {
+        if(this.value ==""){
+            lab.className = "show";
+
+        }else{
+            lab.className = "hide";
+        }
+    }
+
+</script>
+</body>
+</html>

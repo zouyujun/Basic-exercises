@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>32.百度皮肤</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            text-align: center;
+            padding-top: 35px;
+        }
+        img{
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        body{
+            background: url("image/10.jpg") no-repeat;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <img src="image/10.jpg" alt="" width="200px">
+    <img src="image/20.jpg" alt="" width="200px">
+    <img src="image/30.jpg" alt="" width="200px">
+    <img src="image/40.jpg" alt="" width="200px">
+    <img src="image/50.jpg" alt="" width="200px">
+    <script>
+        var imgArr = document.getElementsByTagName("img");
+        var body = document.body;
+        for(var i = 0; i < imgArr.length;i++){
+            imgArr[i].onclick = function () {
+                body.style.backgroundImage = "url("+this.src+")";
+            }
+        }
+    </script>
+</div>
+</body>
+</html>

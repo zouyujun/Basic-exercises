@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>19.切换图片</title>
+</head>
+<body>
+<a href="#">切换</a>
+<div><img src="image/1.jpg " alt="" width="200px"></div>
+<script>
+    var a = document.getElementsByTagName("a")[0];
+    var img = document.getElementsByTagName("img")[0];
+    a.onclick = function () {
+        img.src = "image/2.jpg"
+
+    }
+</script>
+</body>
+</html>

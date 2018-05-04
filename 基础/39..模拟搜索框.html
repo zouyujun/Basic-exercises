@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>39..模拟搜索框.html</title>
+    <style>
+        .box{
+            margin: 0 auto;
+            width: 600px;
+        }
+        input{
+            width: 500px;
+            height: 20px;
+
+        }
+        ul{
+            width: 390px;
+            padding: 5px;
+            list-style: none;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <input type="text">
+    <button>搜索</button>
+</div>
+<script>
+    var arr = ["a","ab","abc","abcd","aa","aaa"];
+    var div = document.getElementsByTagName("div")[0];
+    var inp = div.children[0];
+//在输入第一个字母时判断第一个字 并把以这个字为开头的添加到ul中
+    inp.onkeyup = function () {
+        var newArr = [];
+        for(var i = 0; i <arr.length; i++){
+            var val = this.value;
+            if(arr[i].indexOf(val)===0){
+                newArr.push("<li>"+arr[i]+"</li>");
+            }
+        }
+        //清除之前产生的ul
+        if(div.children[2]){
+            div.removeChild(div.children[2])
+        }
+
+        var str = newArr.join("");
+        var ul = document.createElement("ul");
+        ul.innerHTML = str;
+        div.appendChild(ul);
+    }
+
+</script>
+</body>
+</html>
