@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>照片册子练习</title>
+    <!--没看视频前-->
+   <!-- <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        ul{
+
+            height: 500px;
+            margin-top: 200px;
+            background-color: skyblue;
+            box-sizing: border-box;
+            padding-left: 400px;
+
+
+        }
+        ul li{
+            margin: 150px auto;
+            list-style: none;
+            float: left;
+            transition: transform 1.5s;
+
+        }
+        ul li:nth-child(1){
+            transform: rotate(30deg);
+
+        }
+        ul li:nth-child(2){
+            transform-origin: right top;
+            transform: rotate(-25deg);
+
+        }
+        ul li:nth-child(3){
+            transform: rotate(20deg);
+        }
+        ul li:nth-child(4){
+            transform: rotate(45deg);
+        }
+        li:nth-child(1):hover{
+            transform: rotate(-30deg);
+            transform: scale(1.5);
+        }
+        li:nth-child(2):hover{
+            transform: rotate(25deg);
+            transform: scale(1.5);
+        }
+        li:nth-child(3):hover{
+            transform: rotate(-20deg);
+            transform: scale(1.5);
+        }
+        li:nth-child(4):hover{
+            transform: rotate(-45deg);
+            transform: scale(1.5);
+        }
+    </style> -->
+    <style>
+        ul{
+            height: 500px;
+            background-color: skyblue;
+            text-align: center;
+            margin-top: 200px;
+            border: 1px solid #000;
+        }
+        ul li{
+            list-style:none;
+            display: inline-block;
+
+            width: 150px;
+            height: 200px;
+            transition: 2s;
+            position: relative;
+
+           
+        }
+        ul li img{
+            width: 220px;
+            margin-top: 80px;
+            border: 6px solid #fff;
+        }
+        li:nth-child(1){
+            transform: rotate(30deg);
+
+        }
+        li:nth-child(2){
+            transform: rotate(-40deg);
+
+        }
+        li:nth-child(3){
+            transform: rotate(15deg);
+
+        }
+        li:nth-child(4){
+            transform: rotate(45deg);
+        }
+        li:hover{
+           transform: scale(1.5);
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li><img src="image/nini.jpg" alt=""></li>
+    <li><img src="image/nini1.jpg" alt=""></li>
+    <li><img src="image/nini2.jpg" alt=""></li>
+    <li><img src="image/dlrb.jpg" alt=""></li>
+
+
+</ul>
+</body>
+</html>

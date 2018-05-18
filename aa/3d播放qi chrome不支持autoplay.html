@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3d播放qi</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-image: url(image/bg.jpg);
+            background-repeat:no-repeat;
+            background-size: cover;
+            overflow: hidden;
+
+        }
+        ul{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 50%;
+            bottom: 100px;
+            margin-left:-100px;
+            transform: rotateX(0deg) rotateY(0deg);
+            transform-style: preserve-3d;
+            animation: zyj 10s linear infinite ;
+       
+        }
+        ul li{
+            list-style: none;
+            width: 200px;
+            height: 200px;
+            background-color: black;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        ul li img{
+            width: 200px;
+            height: 200px;
+            border: 5px solid skyblue;
+            box-sizing: border-box;
+        }
+        ul li:nth-child(1){
+            transform: rotateY(60deg) translateZ(200px);
+        }
+        ul li:nth-child(2){
+            transform: rotateY(120deg) translateZ(200px);
+        }
+        ul li:nth-child(3){
+            transform: rotateY(180deg) translateZ(200px);
+        }
+        ul li:nth-child(4){
+            transform: rotateY(240deg) translateZ(200px);
+        }
+        ul li:nth-child(5){
+            transform: rotateY(300deg) translateZ(200px);
+        }
+        ul li:nth-child(6){
+            transform: rotateY(360deg) translateZ(200px);
+        }
+        @keyframes zyj {
+            from{
+
+                transform: rotateX(-10deg) rotateY(0deg);
+            }
+            to{
+
+                transform: rotateX(-10deg) rotateY(360deg);
+            }
+        }
+        ul:hover{
+
+            animation-play-state: paused;
+        }
+        ul:hover li img{
+            opacity: 0.5;
+
+        }
+        ul li:hover img{
+            opacity: 1;
+        }
+        .heart{
+            position: absolute;
+            left: 100px;
+            bottom: 100px;
+            animation: love 10s linear infinite;
+        }
+        @keyframes love {
+            0%{
+                left: 100px;
+                bottom: 100px;
+
+            }
+            20%{
+                left: 300px;
+                bottom: 300px;
+                opacity: 0;
+            }
+            40%{
+                left: 500px;
+                bottom: 500px;
+                opacity: 1;
+            }
+            60%{
+                left: 800px;
+                bottom: 300px;
+                opacity: 0;
+            }
+            80%{
+                left: 1200px;
+                bottom: 200px;
+                opacity: 1 ;
+            }
+            100%{
+                left:800px;
+                bottom: -300px;
+
+            }
+
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li><img src="image/1.png" alt=""></li>
+    <li><img src="image/2.jpg" alt=""></li>
+    <li><img src="image/3.jpg" alt=""></li>
+    <li><img src="image/4.gif" alt=""></li>
+    <li><img src="image/5.jpg" alt=""></li>
+    <li><img src="image/6.jpg" alt=""></li>
+
+</ul>
+<img class="heart" src="image/xin.png" alt="">
+
+<!--<audio src="woxingzhezuomeng.mp3" autoplay loop="loop" controls></audio>-->
+<audio src="woxingzhezuomeng.mp3" autoplay></audio>
+</body>
+</html>
